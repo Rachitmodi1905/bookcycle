@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Second-Hand Bookstore</title>
+  <link rel="stylesheet" href="bookcycle.css" />
+</head>
+<body>
+
+  <h1>Book cycle</h1>
+
+  <!-- Book Form -->
+  <section id="book-form">
+    <input id="username" placeholder="Your Name" />
+    <input id="title" placeholder="Book Title" />
+    <input id="price" type="number" placeholder="Price" />
+    
+    <select id="class">
+      <option value="">Select Class</option>
+      <option value="10th Grade">10th Grade</option>
+      <option value="12th Grade">12th Grade</option>
+      <option value="Undergraduate (UG)">Undergraduate (UG)</option>
+      <option value="Postgraduate (PG)">Postgraduate (PG)</option>
+    </select>
+
+    <select id="condition">
+      <option value="">Select Condition</option>
+      <option value="New">New</option>
+      <option value="Used">Used</option>
+      <option value="Good Condition">Good Condition</option>
+      <option value="Damaged">Damaged</option>
+    </select>
+
+    <input id="location" placeholder="Your City or Location" />
+    <input id="image" type="file" accept="image/*" />
+    <button onclick="addBook()">Add Your Book</button>
+  </section>
+
+  <!-- Filter Section -->
+  <section id="filter-section">
+    <h3>Search Filters</h3>
+    <input id="filterTitle" placeholder="Search by Title" oninput="applyFilters()" />
+    <select id="filterClass" onchange="applyFilters()">
+      <option value="">All Classes</option>
+      <option value="10th Grade">10th Grade</option>
+      <option value="12th Grade">12th Grade</option>
+      <option value="Undergraduate (UG)">Undergraduate (UG)</option>
+      <option value="Postgraduate (PG)">Postgraduate (PG)</option>
+    </select>
+    <select id="filterCondition" onchange="applyFilters()">
+      <option value="">All Conditions</option>
+      <option value="New">New</option>
+      <option value="Used">Used</option>
+      <option value="Good Condition">Good Condition</option>
+      <option value="Damaged">Damaged</option>
+    </select>
+    <input id="filterLocation" placeholder="Search by Location" oninput="applyFilters()" />
+  </section>
+
+  <!-- Book List -->
+  <section id="book-list">
+    <h2>Books for Sale</h2>
+    <ul id="books"></ul>
+  </section>
+
+  <!-- Customer Support Section -->
+  <section id="customer-support">
+    <h2>Need Help?</h2>
+    <p>If you have any questions or need help, feel free to contact our customer support team:</p>
+    <ul>
+      <li>📧 Email: <a href="mailto:support@secondhandbooks.com">support@secondhandbooks.com</a></li>
+      <li>📞 Phone: <a href="tel:+911234567890">+91-123-456-7890</a></li>
+      <li>💬 Live Chat: <button onclick="openChat()">Start Chat</button></li>
+    </ul>
+  </section>
+
+  <script src="bookcycle.js"></script>
+</body>
+</html>
